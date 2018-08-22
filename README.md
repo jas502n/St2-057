@@ -39,7 +39,7 @@ apt-get install unzip -y
 cp struts2-showcase.war /usr/local/tomcat/webapps/
 
 ```
-![(./wget-st2-057.jpg)]
+![](./wget-st2-057.jpg)
 
 # 0x03 修改配置文件
 
@@ -68,7 +68,7 @@ https://lgtm.com/blog/apache_struts_CVE-2018-11776
     </package>
 </struts>
 ```
-![./struts-actionchaining.jpg]
+![](./struts-actionchaining.jpg)
 
 然后去bin，kill掉进程,因为修改了配置文件，所以需要重启服务
 ```
@@ -93,7 +93,7 @@ docker 靶机：http://www.canyouseeme.cc:8080/struts2-showcase/
 ${(111+111)}
 得到执行结果返回在url中：http://www.canyouseeme.cc:8080/struts2-showcase/222/register2.action
 
-![./st2-57.jpg]
+![](./st2-57.jpg)
 
 Ps: ${(111+111)} 可以替换成以前的poc，例如S2-032
 
