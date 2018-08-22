@@ -1,7 +1,7 @@
 # St2-057
-St2-057 Poc Example
 
-0x01 搭建环境docker
+
+# 0x01 搭建环境docker
 
 https://github.com/vulhub/vulhub/tree/master/struts2/s2-048
 
@@ -9,7 +9,7 @@ https://github.com/vulhub/vulhub/tree/master/struts2/s2-048
 docker-compose up -d
 ```
 
-0x02 搭建st2-057漏洞环境
+# 0x02 搭建st2-057漏洞环境
 
 ```
 docker exec -i -t 88fd8d560155 /bin/bash
@@ -41,7 +41,7 @@ cp struts2-showcase.war /usr/local/tomcat/webapps/
 ```
 ![(./wget-st2-057.jpg)]
 
-0x03 修改配置文件
+# 0x03 修改配置文件
 
 先查找文件struts-actionchaining.xml，发现有2处需要修改
 ```
@@ -81,13 +81,13 @@ root@88fd8d560155:/usr/local/tomcat/bin# ./shutdown.sh
 ```
 ![./donw.jpng]
 
-0x04 重启服务，st2-057搭建完成
+# 0x04 重启服务，st2-057搭建完成
 ```
  ✘ ⚡ root@HK  ~/vulhub/struts2/s2-048   master ●  docker-compose up -d
 Starting s2-048_struts2_1 ... done
  ⚡ root@HK  ~/vulhub/struts2/s2-048   master ●  
 ```
-0x05  验证st2-057
+# 0x05  验证st2-057
 docker 靶机：http://www.canyouseeme.cc:8080/struts2-showcase/
 命令执行：http://www.canyouseeme.cc:8080/struts2-showcase/${(111+111)}/actionChain1.action
 ${(111+111)}
