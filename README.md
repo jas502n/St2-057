@@ -80,7 +80,7 @@ catalina-tasks.xml  commons-daemon-native.tar.gz  configtest.sh       digest.sh 
 root@88fd8d560155:/usr/local/tomcat/bin# ./shutdown.sh 
 
 ```
-![](./donw.jpg)
+![](./down.jpg)
 
 # 0x04 重启服务，st2-057搭建完成
 ```
