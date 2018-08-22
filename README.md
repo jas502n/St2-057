@@ -26,6 +26,7 @@ Struts 2.5.16	16 March 2018	S2-057	Version notes
 Struts 2.5.14.1	30 November 2017	Version notes
 Struts 2.5.14	23 November 2017	S2-055, S2-054	Version notes
 ```
+![](./in-st2-57.jpg)
 Struts 2.5.16存在s2-057漏洞，然后去下载这个版本
 
 https://fossies.org/linux/www/legacy/struts-2.5.16-all.zip/
@@ -102,4 +103,11 @@ Ps: ${(111+111)} 可以替换成以前的poc，例如S2-032
 
 
 
+# 0x06 参考链接
 
+```
+https://github.com/vulhub/vulhub/tree/master/struts2/s2-048
+https://lgtm.com/blog/apache_struts_CVE-2018-11776
+https://cwiki.apache.org/confluence/display/WW/S2-057
+https://www.anquanke.com/post/id/157518
+```
