@@ -88,6 +88,7 @@ root@88fd8d560155:/usr/local/tomcat/bin# ./shutdown.sh
 Starting s2-048_struts2_1 ... done
  ⚡ root@HK  ~/vulhub/struts2/s2-048   master ●  
 ```
+![](./start.jpg)
 # 0x05  验证st2-057
 docker 靶机：http://www.canyouseeme.cc:8080/struts2-showcase/
 
