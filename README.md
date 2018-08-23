@@ -129,6 +129,8 @@ ${
 
 漏洞环境：struts-2.2.3.1-all.zip 
 
+下载地址：http://archive.apache.org/dist/struts/binaries/struts-2.2.3.1-all.zip
+
 ![](./struts-2.2.3.1.jpg)
 Ps： 坑就是低版本能弹计算器，高版本不能
 
